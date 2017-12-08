@@ -42,7 +42,6 @@ namespace Exercicio1
             double delta = b * b - 4 * a * c;
             double a1 = (-b + Math.Sqrt(delta)) / (2 * a);
             double a2 = (-b - Math.Sqrt(delta)) / (2 * a);*/
-            
 
             MessageBox.Show("valores: " + delta + " e " + a2);
         }
