@@ -6,32 +6,29 @@ using System.Threading.Tasks;
 
 namespace Conta_Bancária
 {
-    class Conta
+    public class Conta
     {
-        public int numero;
-        public string titular;
-        public double saldo = 100.0;
+        public int Numero { get; set; }
+        public double Saldo { get; protected set; }
 
-        //declaração de atributos
-        public bool Saca(double valor)
+        public Cliente Titular { get; set; }
+
+        public int Tipo { get; set; }
+
+        public virtual bool Saca(double valor)
         {
-            //Implementação do método
-            if (this.saldo >= 100.0)
-                //utilizando o this pois a variável está declarada em
-                // outra classe
-            {
-                this.saldo -= 100.0;
-                return true;
-            }
-            return false;
-
+            return true;
         }
 
-        public void Deposito(double valor)
+        public void Deposita(double valor)
         {
-            this.saldo += valor;
+            this.Saldo += valor;
         }
 
 
     }
+
+
+
+
 }
